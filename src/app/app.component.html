@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container class="sidenav-container">
+  <md-sidenav #sidenav mode="over" opened="true" class="sidenav">
+    <md-toolbar color="primary">
+      <span class="name" (click)="sidenav.toggle()">kikback</span>
+    </md-toolbar>  
+  </md-sidenav>
+  <md-toolbar color="primary">
+    <span class="name" (click)="sidenav.toggle()">kikback</span>
+    <span class="example-fill-remaining-space"></span>
+    <span>Right Aligned Text</span>
+</md-toolbar>
+
+  <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <md-icon>add</md-icon>
+  </button>
+  <div>
+    content
+  </div>
+</md-sidenav-container>
