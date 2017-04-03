@@ -1,19 +1,16 @@
 <md-sidenav-container class="sidenav-container">
-  <md-sidenav #sidenav mode="over" opened="true" class="sidenav">
+  <!--<md-sidenav #sidenav mode="over" opened="true" class="sidenav">
     <md-toolbar color="primary">
       <span class="name" (click)="sidenav.toggle()">kikback</span>
     </md-toolbar>  
-  </md-sidenav>
+  </md-sidenav>-->
   <md-toolbar color="primary">
     <span class="name" (click)="sidenav.toggle()">kikback</span>
     <span class="example-fill-remaining-space"></span>
-    <span>Right Aligned Text</span>
+    <span>app stuff</span>
 </md-toolbar>
+<div class="toolbar-shadow"></div>
 
-  <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
-    <md-icon>add</md-icon>
-  </button>
-  <div>
-    content
-  </div>
+ 
+  <router-outlet></router-outlet>
 </md-sidenav-container>
