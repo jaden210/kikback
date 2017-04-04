@@ -27,6 +27,9 @@
 
 .name {
   cursor: pointer;
+  margin: auto;
+  font-family: tornac;
+  font-size: 36px;
 }
 
 
@@ -35,4 +38,9 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 24px;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
