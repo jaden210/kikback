@@ -9,7 +9,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 $primary: mat-palette($mat-blue);
-$accent:  mat-palette($mat-cyan, 500, 500, 500);
+$accent:  mat-palette($mat-pink, 500, 500, 500);
 
 // The warn palette is optional (defaults to red).
 $warn:    mat-palette($mat-red);

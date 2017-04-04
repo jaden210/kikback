@@ -2,23 +2,102 @@
     width: 100%;
 }
 
+.full-page {
+    height: 80vh;
+    position: relative;
+    width: 100vw;
+}
+
 .page {
     background-color: #FFF;
 }
 
 .school-container {
+    margin-top: -17%;
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
+    margin-left: 10%;
+    padding: 12px;
+    position: absolute;
+    width: 180px;
+    max-width: 50%;
+    font-family: Roboto;
+    opacity: .87;
+    border-radius: 8px;
+    transition: all 200ms;
 }
 
 img {
     width: 100%;
     height: auto;
-    margin-top: 48px;
 }
 
-.body {
+.school-container:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#school {
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+#location {
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.buttons {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    bottom: 12px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+#extension {
+    display: none;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 800px) {
+    .full-page {
+        height: 100vh;
+    }
+
+    img {
+        margin-top: -72px;
+    }
+
+    .school-container {
+        width: 800px;
+    }
+
+    #school {
+        font-size: 34px;
+    }
+
+    #location {
+        font-size: 26px;
+    }
+
+    .main-container {
+        height: 500px;
+    }
+
+    #extension {
+        display: block;
+    }
 }
