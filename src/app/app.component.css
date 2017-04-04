@@ -28,3 +28,11 @@
 .name {
   cursor: pointer;
 }
+
+
+.buttons {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}

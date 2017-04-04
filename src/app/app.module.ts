@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AppRoutingModule } from './app.routing';
-import { HomeModule } from './home/home.module';
 import './rxjs-operators';
 
 import { AppComponent } from './app.component';
@@ -18,8 +17,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    MaterialModule,
-    HomeModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
