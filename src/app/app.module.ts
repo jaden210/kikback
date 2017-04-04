@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app.routing';
 import './rxjs-operators';
 
 import { AppComponent } from './app.component';
+import { RevStatsComponent } from './rev-stats/rev-stats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    RevStatsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,11 @@
-<md-sidenav-container class="sidenav-container">
-  <!--<md-sidenav #sidenav mode="over" opened="true" class="sidenav">
-    <md-toolbar color="primary">
-      <span class="name" (click)="sidenav.toggle()">kikback</span>
-    </md-toolbar>  
-  </md-sidenav>-->
-  <md-toolbar color="primary">
+<md-toolbar color="primary">
     <span class="name" (click)="sidenav.toggle()">K12 kikback</span>
 </md-toolbar>
 <div class="toolbar-shadow" *ngIf="false"></div>
-<img src="./assets/kikback.png">
+
 
  
-  <router-outlet></router-outlet>
+ <app-rev-stats></app-rev-stats>
 
    <div class="buttons">
       <a target="_blank" href="https://www.amazon.com/gp/site-directory/ref=nav_shopall_btn?&_encoding=UTF8&tag=kikback-20&linkCode=ur2&linkId=4bccb1bac5c823e8cd556e7241726437&camp=1789&creative=9325"><button md-raised-button color="accent">Shop Amazon</button></a>
@@ -20,5 +14,3 @@
     </div>
 
   <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fkinhphhnnfgcbfodlbbjgonmdifggni">
-
-</md-sidenav-container>
