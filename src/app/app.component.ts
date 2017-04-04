@@ -18,18 +18,9 @@ export class AppComponent implements OnInit {
     { id: 2, name: "Desert Hills", zipCode: "84781" },
     { id: 3, name: "Desert Hills", zipCode: "84782" },
   ];
+  toolbarOn: boolean;
 
   constructor(private _http: Http, private _appService: AppService) { }
-
-  selectSchool(zipCode) {
-    for (let school of this.schools) {
-      if (school.zipCode.includes(zipCode)) {
-        localStorage.setItem("schoolId", school.id.toString());
-        this.schoolId = school.id;
-        return;
-      }
-    }
-  }
 
   ngOnInit() {
     if (localStorage.getItem("schoolId")) {
@@ -42,6 +33,29 @@ export class AppComponent implements OnInit {
             this.selectSchool(res.json().results[0].address_components[6].long_name.toString());
           });
       });
+    };
+    this.checkPosition()
+  }
+
+  selectSchool(zipCode) {
+    for (let school of this.schools) {
+      if (school.zipCode.includes(zipCode)) {
+        localStorage.setItem("schoolId", school.id.toString());
+        this.schoolId = school.id;
+        return;
+      }
     }
   }
+
+  checkPosition(): void {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        this.toolbarOn = true;
+      } else {
+        this.toolbarOn = false;
+      }
+    });
+  }
 }
+
+

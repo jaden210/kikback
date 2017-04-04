@@ -1,16 +1,8 @@
-<md-toolbar color="primary">
-    <span class="name" (click)="sidenav.toggle()">K12 kikback</span>
+<md-toolbar color="primary" [ngClass]="toolbarOn ? 'toolbar-shadow' : null">
+    <span class="name" (click)="sidenav.toggle()">kikback</span>
 </md-toolbar>
-<div class="toolbar-shadow" *ngIf="false"></div>
 
-
- 
- <app-rev-stats></app-rev-stats>
-
-   <div class="buttons">
-      <a target="_blank" href="https://www.amazon.com/gp/site-directory/ref=nav_shopall_btn?&_encoding=UTF8&tag=kikback-20&linkCode=ur2&linkId=4bccb1bac5c823e8cd556e7241726437&camp=1789&creative=9325"><button md-raised-button color="accent">Shop Amazon</button></a>
-      <button md-raised-button color="accent" (click)="chrome.webstore.install()" id="install-link">Skip the site, Install the Chrome Extension!</button>
-      <a target="_blank" href="https://www.amazon.com/wedding/bryson-wilding-kelsey-hobbs-ogden-march-2017/registry/3V2PFI51STEXW?&_encoding=UTF8&tag=kikback-20&linkCode=ur2&linkId=fb2b2cc48b21b34213528456438f1a65&camp=1789&creative=9325"><button md-raised-button color="accent">See my Schools Registry</button></a>
-    </div>
-
-  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fkinhphhnnfgcbfodlbbjgonmdifggni">
+<div class="body">
+    <app-rev-stats (scroll)="checkPosition()"></app-rev-stats>
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fkinhphhnnfgcbfodlbbjgonmdifggni">
+</div>
